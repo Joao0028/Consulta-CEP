@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Quicksand:wght@300;400&family=Shadows+Into+Light&display=swap');
+
+
+
+
+body{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: #171717;
+}
+
+
+.titulo{
+    text-align: center;
+    margin: 1em 0;
+    font-size: 25px;
+}
+
+.subtitulo{
+    text-align: center;
+    padding: 1em;
+    color: #005bc5;
+}
+
+
+.container{
+    width:350px;
+    padding: 1em;
+    margin: auto;
+    border-radius: 25px;
+    background-color:#111111;
+    height: 400px;
+}
+
+.divide{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container:hover{
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulseBlack 1.5s ;
+    transition: 5s;
+    border:  1px solid #005bc5;
+}
+
+.campo-CEP,
+.campo-cidade,
+.campo-complemento,
+.campo-bairro,
+.campo-endereco,
+.campo-uf,
+.campo-ddd{
+    background: none;
+    border: none;
+    outline: none;
+    width: 90%;
+    color: #d3d3d3;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    border-radius: 30px;
+    padding: 1em;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 0;
+}
+.campo-CEP:focus,
+.campo-cidade:focus,
+.campo-complemento:focus,
+.campo-bairro:focus,
+.campo-endereco:focus,
+.campo-uf:focus,
+.campo-ddd:focus{
+    transition: 5s;
+    border:  1px solid #005bc5;
+}
+
+.campo-ddd, .campo-uf{
+    width: 40%;
+}
+
+
+
+@keyframes pulseBlack {
+
+    0% {
+     box-shadow: 0 0 0 0  black;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+    
+}
+
+footer{
+    text-align: center;
+    margin: 10px;
+    color: #005bc5;
+}
+
+
+.MensagemErro{
+    color: #ff000070;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .container{
+        width: 250px;
+        border-radius: 15px;
+    }
+
+    .campo-ddd, .campo-uf{
+        width: 38%;
+    }
+}
